@@ -24,6 +24,9 @@ scope="session" />
 <fmt:message key="label.lastname"/> <i>Doe</i><br/><br/>
 
 <fmt:message key="label.welcome"/><br/>
+
+<hr>
+Selected locale: ${theLocale}
 </body>
 </html>
 
