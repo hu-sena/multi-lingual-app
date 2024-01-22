@@ -1,6 +1,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
+<!-- assign theLocale variable but if null, pull from request session based on browser -->
+<c:set var="theLocale" 
+value="${not empty param.theLocale ? param.theLocale : pageContext.request.locale}"
+scope="session" />
+
+<!-- format the message based on theLocale + base file:en_US -->
+<fmt:setLocale value="${theLocale}" />
+<fmt:setBundle basename="i18n.resources.mylabels" />
+
 <html>
 <body>
 
